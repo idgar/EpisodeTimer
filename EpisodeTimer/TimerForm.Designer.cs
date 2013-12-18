@@ -1,6 +1,6 @@
 ﻿namespace EpisodeTimer
 {
-    partial class Form1
+    partial class TimerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -41,33 +41,33 @@
             // 
             // lblDuration
             // 
-            this.lblDuration.AutoSize = true;
             this.lblDuration.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDuration.Location = new System.Drawing.Point(12, 9);
             this.lblDuration.Name = "lblDuration";
             this.lblDuration.Size = new System.Drawing.Size(337, 108);
             this.lblDuration.TabIndex = 0;
-            this.lblDuration.Text = "000:00";
+            this.lblDuration.Text = "0:00";
+            this.lblDuration.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblMinDuration
             // 
-            this.lblMinDuration.AutoSize = true;
             this.lblMinDuration.ForeColor = System.Drawing.Color.LimeGreen;
             this.lblMinDuration.Location = new System.Drawing.Point(355, 9);
             this.lblMinDuration.Name = "lblMinDuration";
             this.lblMinDuration.Size = new System.Drawing.Size(40, 13);
             this.lblMinDuration.TabIndex = 1;
-            this.lblMinDuration.Text = "000:00";
+            this.lblMinDuration.Text = "0:00";
+            this.lblMinDuration.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // lblMaxDuration
             // 
-            this.lblMaxDuration.AutoSize = true;
             this.lblMaxDuration.ForeColor = System.Drawing.Color.OrangeRed;
             this.lblMaxDuration.Location = new System.Drawing.Point(355, 61);
             this.lblMaxDuration.Name = "lblMaxDuration";
             this.lblMaxDuration.Size = new System.Drawing.Size(40, 13);
             this.lblMaxDuration.TabIndex = 2;
-            this.lblMaxDuration.Text = "000:00";
+            this.lblMaxDuration.Text = "0:00";
+            this.lblMaxDuration.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // btnMinDuration
             // 
@@ -96,6 +96,7 @@
             this.btnStart.TabIndex = 5;
             this.btnStart.Text = "Start";
             this.btnStart.UseVisualStyleBackColor = true;
+            this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
             // btnReset
             // 
@@ -105,6 +106,7 @@
             this.btnReset.TabIndex = 6;
             this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // lblHotkey
             // 
@@ -124,7 +126,7 @@
             this.btnHotkey.Text = "Set Hotkey";
             this.btnHotkey.UseVisualStyleBackColor = true;
             // 
-            // Form1
+            // TimerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -140,7 +142,7 @@
             this.Controls.Add(this.lblDuration);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "TimerForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "Episode Timer";
             this.ResumeLayout(false);
